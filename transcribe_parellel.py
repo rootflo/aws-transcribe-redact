@@ -24,6 +24,16 @@ language_support = os.getenv("AUDIO_LANGUAGE_SUPPORT", "en-IN,hi-IN").split(",")
 thread_count = int(os.getenv("THREAD_COUNT", "4"))
 max_parallel_jobs = int(os.getenv("MAX_PARALLEL_JOBS", "5"))
 
+print("Configuration:")
+print("-----------------------------")
+print(f"Input Bucket:                 {input_bucket}")
+print(f"Transcription Bucket:         {transcription_bucket}")
+print(f"Redaction Bucket:             {redaction_bucket}")
+print(f"Supported Languages:          {', '.join(language_support)}")
+print(f"Thread Count:                 {thread_count}")
+print(f"Max Parallel Jobs:            {max_parallel_jobs}")
+print("-----------------------------")
+
 # Queues
 audio_file_queue = Queue()
 transcription_queue = Queue()
