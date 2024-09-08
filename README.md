@@ -54,7 +54,7 @@ docker run -e AUDIO_INPUT_BUCKET=your-input-bucket \
 ### Building and running the Docker Image
 
 ```sh
-docker build -t aws-transcribe-comprehend .
+docker build -t aws-transcribe-redact .
 ```
 
 #### Running Docker
@@ -69,7 +69,7 @@ docker run -e AUDIO_INPUT_BUCKET=your-input-bucket \
            -e AWS_ACCESS_KEY_ID=your-access-key-id \
            -e AWS_SECRET_ACCESS_KEY=your-secret-access-key \
            -e AWS_DEFAULT_REGION=us-east-1 \
-           aws-transcribe-comprehend
+           aws-transcribe-redact
 ```
 Replace the environment variables with your actual bucket names, AWS credentials, and configurations.
 
@@ -86,8 +86,8 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 ### Possible improvements:
 
-1. Make reduction optional using parameters.
-2. Making queue distributed using redis, rabbitmq or equivalent.
+1. Make redaction optional using parameters.
+2. Making queue distributed using Redis, rabbitmq or equivalent.
 
 ## Contact
 For questions or support, vishnu@rootflo.ai
