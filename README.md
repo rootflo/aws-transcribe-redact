@@ -15,7 +15,7 @@ This project provides a Dockerized Python script to manage audio transcription a
 ## Prerequisites
 
 - **AWS Account:** Ensure you have an AWS account with access to S3, Transcribe, and Comprehend services.
-- **AWS Permissions:** `AmazonS3FullAccess`, `AmazonTranscribeFullAccess`, `ComprehendFullAccess`. Attahc these permissions to the AWS user with the above credentials
+- **AWS Permissions:** `AmazonS3FullAccess`, `AmazonTranscribeFullAccess`, `ComprehendFullAccess`. Attach these permissions to the AWS user with the above credentials
 - **Docker:** Make sure Docker is installed on your machine.
 
 ## Configuration
