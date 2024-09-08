@@ -35,13 +35,28 @@ This project provides a Dockerized Python script to manage audio transcription a
 
 ## Getting Started
 
-### Build the Docker Image
+### Running docker from Docker Hub
+
+```
+docker run -e AUDIO_INPUT_BUCKET=your-input-bucket \
+           -e AUDIO_TRANSCRIPTION_BUCKET=your-transcription-bucket \
+           -e AUDIO_TRANSCRIPTION_REDACTION_BUCKET=your-redaction-bucket \
+           -e AUDIO_LANGUAGE_SUPPORT=en-IN,hi-IN \
+           -e THREAD_COUNT=4 \
+           -e MAX_CONCURRENT_JOBS=5 \
+           -e AWS_ACCESS_KEY_ID=your-access-key-id \
+           -e AWS_SECRET_ACCESS_KEY=your-secret-access-key \
+           -e AWS_DEFAULT_REGION=us-east-1 \
+           rvizsatiz/aws-transcribe-redact:v1
+```
+
+### Building and running the Docker Image
 
 ```sh
 docker build -t aws-transcribe-comprehend .
 ```
 
-### Running Docker
+#### Running Docker
 
 ```
 docker run -e AUDIO_INPUT_BUCKET=your-input-bucket \
