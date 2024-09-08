@@ -29,4 +29,4 @@ RUN poetry install --no-root
 COPY transcribe_parellel.py /app
 
 # Run the Python script
-CMD ["poetry", "run", "python", "transcribe_parellel.py"]
+CMD ["poetry", "run", "python", "transcribe_parallel.py"]
